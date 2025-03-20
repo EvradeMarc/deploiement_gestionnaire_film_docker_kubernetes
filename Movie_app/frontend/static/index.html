@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestionnaire de Films</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title-film">Gestionnaire de Films</h1>
+
+      <!-- Formulaire d'ajout/modification -->
+      <form id="movieForm" class="movie-form">
+        <input type="hidden" id="movieId" />
+        <div class="form-group">
+          <label for="title">Titre</label>
+          <input type="text" id="title" required />
+        </div>
+        <div class="form-group">
+          <label for="director">Réalisateur</label>
+          <input type="text" id="director" />
+        </div>
+        <div class="form-group">
+          <label for="year">Année</label>
+          <input type="number" id="year" />
+        </div>
+        <div class="form-group">
+          <label for="genre">Genre</label>
+          <input type="text" id="genre" />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3"></textarea>
+        </div>
+        <button type="submit" id="submitBtn">Ajouter</button>
+        <button type="button" id="cancelBtn" style="display: none">
+          Annuler
+        </button>
+      </form>
+
+      <!-- Liste des films -->
+      <div class="movies-list">
+        <h2 style="color: white;">Liste des Films</h2>
+        <div id="moviesList"></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
