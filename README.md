@@ -24,3 +24,8 @@ Frontend : HTML, CSS, JavaScript
 Conteneurisation : Docker
 
 Orchestration : Kubernetes
+
+📸 Capture d'écran
+
+![image](https://github.com/user-attachments/assets/9b376b04-408a-4286-aa52-a77aebce1e18)
+![image](https://github.com/user-attachments/assets/371bc0e6-7b4f-48f2-b469-fae40bc9e0fc)
