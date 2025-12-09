@@ -432,6 +432,3 @@ npm start
 ```
 
 ---
-
-**Auteur** : EvradeMarc  
-**Créé** : Décembre 2025
