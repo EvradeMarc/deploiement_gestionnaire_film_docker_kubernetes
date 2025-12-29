@@ -6,8 +6,8 @@ let pool;
 
 async function init() {
   const host = process.env.DB_HOST;
-  const user = process.env.DB_USER ;
-  const password = process.env.DB_PASSWORD ;
+  const user = process.env.DB_USER;
+  const password = process.env.DB_PASSWORD;
   const database = process.env.DB_NAME;
 
   await waitPort({
@@ -82,7 +82,14 @@ async function updateMovie(id, movie) {
   return new Promise((acc, rej) => {
     pool.query(
       "UPDATE movies SET title = ?, director = ?, year = ?, genre = ?, description = ? WHERE id = ?",
-      [ movie.title, movie.director, movie.year, movie.genre, movie.description, id],
+      [
+        movie.title,
+        movie.director,
+        movie.year,
+        movie.genre,
+        movie.description,
+        id,
+      ],
       function (err) {
         if (err) return rej(err);
         acc();

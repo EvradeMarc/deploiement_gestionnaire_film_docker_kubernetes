@@ -1,0 +1,42 @@
+services:
+  mysql-service:
+    image: mysql:8.0
+    container_name: mysql-service
+    environment:
+      MYSQL_ROOT_PASSWORD: Evrade@1904
+      MYSQL_PASSWORD: Evrade@1904
+      MYSQL_USER: heem
+      MYSQL_DATABASE: moviedb
+    ports:
+      - "3306:3306"
+    networks:
+      - app-networks
+
+  backend-service:
+    build: ./backend
+    container_name: backend-service
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: mysql-service
+      DB_USER: heem
+      DB_PASSWORD: Evrade@1904
+      DB_NAME: moviedb
+    depends_on:
+      - mysql-service
+    networks:
+      - app-networks
+
+  frontend-service:
+    build: ./frontend
+    container_name: frontend-service
+    ports:
+      - "80:80"
+    depends_on:
+      - backend-service
+    networks:
+      - app-networks
+
+networks:
+  app-networks:
+    driver: bridge
