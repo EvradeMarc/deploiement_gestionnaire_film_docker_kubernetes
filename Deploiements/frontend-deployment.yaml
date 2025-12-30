@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: evrademarc/movie_app-frontend-service:v2
+          image: evrademarc/movie-app-frontend
           ports:
             - containerPort: 80
