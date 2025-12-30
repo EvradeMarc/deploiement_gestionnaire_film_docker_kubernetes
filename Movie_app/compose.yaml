@@ -3,8 +3,8 @@ services:
     image: mysql:8.0
     container_name: mysql-service
     environment:
-      MYSQL_ROOT_PASSWORD: Evrade@1904
-      MYSQL_PASSWORD: Evrade@1904
+      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_PASSWORD: your_password
       MYSQL_USER: heem
       MYSQL_DATABASE: moviedb
     ports:
@@ -20,7 +20,7 @@ services:
     environment:
       DB_HOST: mysql-service
       DB_USER: heem
-      DB_PASSWORD: Evrade@1904
+      DB_PASSWORD: your_password
       DB_NAME: moviedb
     depends_on:
       - mysql-service
