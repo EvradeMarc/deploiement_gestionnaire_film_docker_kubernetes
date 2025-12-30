@@ -2,6 +2,8 @@
 
 Ce projet est une application de gestion de films micro-services, conteneurisée avec Docker et orchestrée via Kubernetes (AKS).
 
+Vous pouvez accédez à l'application sur l'adresse : 9.235.136.16
+
 ## 📋 Description
 
 L'objectif principal est la démonstration de la conteneurisation et de l'orchestration de conteneurs. L'application se compose de trois services interconnectés :
