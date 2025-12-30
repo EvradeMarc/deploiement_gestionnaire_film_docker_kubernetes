@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: evrademarc/movie_app-backend-service:v2
+          image: evrademarc/movie-app-backend
           ports:
             - containerPort: 3000
           env:
